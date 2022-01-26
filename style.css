@@ -1,0 +1,291 @@
+:root {
+    --fs-300: clamp(0.7rem, 0.66rem + 0.2vw, 0.8rem);
+    --fs-400: clamp(0.88rem, 0.83rem + 0.24vw, 1rem);
+    --fs-500: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    --fs-600: clamp(1.37rem, 1.21rem + 0.8vw, 1.78rem);
+    --fs-700: clamp(1.71rem, 1.45rem + 1.29vw, 2.37rem);
+    --fs-800: clamp(2.14rem, 1.74rem + 1.99vw, 3.16rem);
+    --fs-900: clamp(2.67rem, 2.07rem + 3vw, 4.21rem);
+    --fs-1000: clamp(3.34rem, 2.45rem + 4.43vw, 5.61rem);
+
+
+    --primary-clr-300: #0c0c0c;
+    --primary-clr-400: #f7444e;
+}
+
+
+*,
+*::before, 
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    line-height: 1.5;
+    font-family: 'Poppings', sans-serif;
+    color: #0c0c0c;
+    background: #fff;
+ 
+}
+
+h1,h2,h3 {
+    line-height: 1.1;
+
+}
+
+ul[role="list"] {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+img, 
+picture,
+video {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+input, 
+textarea,
+select,
+button {
+    color: unset;
+    font: unset;
+}
+
+
+/* Utilities */
+
+.container {
+    max-width: 75rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap, 1rem);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gap, 1rem);
+}
+
+.flow-content > * + * {
+    margin-top: var(--flow-spacer, 1rem)
+}
+
+.section-py {
+    padding-block: 5rem;
+}
+
+
+
+.btn {
+    display: inline-block;
+    border: none;
+    outline: none;
+    background: var(--primary-clr-400);
+    padding: 1rem 2.5rem;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 2px;
+    margin-right: auto;
+}
+
+/* Header Section */
+
+.main-header {
+    padding-block: 2rem;
+}
+
+.main-header .container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.site-logo img {
+    width: 12rem;
+}
+
+.main-nav {
+    --gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-nav .nav__list {
+    --gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main-nav .nav__list li a {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+/* Showcase Section */
+
+.showcase {
+    height: calc(100vh -  6.1em);
+    background-image: url("./images/slider-bg.jpg");
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.showcase .container {
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
+
+.showcase__content {
+    max-width: 40rem;
+}
+
+.showcase__btitle {
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.showcase__red {
+    display: block;
+    color: var(--primary-clr-400);
+}
+
+.showcase__content p:nth-child(2n) {
+    font-size: 1.2rem;
+}
+
+/* Features Section */ 
+
+.features__box {
+    padding: 3rem ;
+    background: #002c3e;
+    color: #fff;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.features__box .fas {
+    font-size: 2.5rem;
+}
+
+.features__box  h3 {
+    font-size: 1.5rem;
+}
+
+
+
+
+/*  New Arrivals */
+
+.arrivals {
+    height: 70vh;
+    background-image: url("./images/arrival-bg.jpg");
+    background-color: #d4ced0;
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.arrivals .container {
+    height: 100%;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+.arrivals__new {
+    max-width: 40rem;
+}
+
+.arrivals__new h2 {
+    font-size: 4rem;
+}
+
+.arrivals__new p {
+    font-size: 1.2rem;
+}
+
+
+
+
+/* New Arrivals */
+
+.new-product .container {
+    --gap: 3rem;
+}
+
+.section-heading {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.heading-red {
+    color: var(--primary-clr-400);
+}
+
+.products {
+    align-items: center;
+    justify-content: center;
+}
+
+.products__box img {
+    width: 10rem;
+}
+
+.products__details {
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 700;
+}
+
+
+.products__box  {
+    --gap: 2rem;
+    position: relative;
+    background: #ccc;
+    align-items: center;
+    padding-block: 2rem;
+   
+}
+
+.product__btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+@media(min-width: 50em) {
+    .features__list {
+        --gap: 2rem;
+        flex-direction: row;
+    }
+
+    .features__box {
+        --gap: 1rem;
+    }
+
+
+    /* New Arrivals */
+
+    .products {
+        grid-template-columns: repeat(3, 1fr );
+    }
+
+
+}
